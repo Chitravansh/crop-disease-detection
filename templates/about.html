@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="about-container">
+  <h1 class="about-title">About ArogyaFasal</h1>
+
+  <p class="about-intro">
+    <strong>ArogyaFasal</strong> is an AI-powered crop disease detection system
+    designed to help farmers and agricultural researchers identify plant
+    diseases quickly using leaf images. The system uses deep learning to analyze
+    leaf patterns and detect possible infections.
+  </p>
+
+  <div class="about-section">
+    <h3>How the System Works</h3>
+
+    <div class="process-flow">
+      <div class="process-card">
+        <h5>Upload Image</h5>
+        <p>User uploads a leaf image using the web interface.</p>
+      </div>
+
+      <div class="process-card">
+        <h5>AI Analysis</h5>
+        <p>The CNN model analyzes visual patterns in the leaf.</p>
+      </div>
+
+      <div class="process-card">
+        <h5>Disease Detection</h5>
+        <p>The model predicts crop type and disease class.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <h3>Key Features</h3>
+
+    <ul class="feature-list">
+      <li>Detects diseases across <strong>38 crop classes</strong></li>
+      <li>AI-based <strong>image classification using CNN</strong></li>
+      <li>Drag-and-drop leaf image upload</li>
+      <li>Real-time prediction with confidence score</li>
+      <li>Interactive web interface using Flask</li>
+    </ul>
+  </div>
+
+  <!-- <div class="about-section">
+
+        <h3> Technology Stack</h3>
+
+        <div class="tech-stack">
+
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">TensorFlow</span>
+            <span class="tech-badge">Keras</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">Bootstrap</span>
+            <span class="tech-badge">JavaScript</span>
+
+        </div>
+
+    </div> -->
+
+  <!-- <div class="about-credits">
+
+        <h4>Developed By</h4>
+
+        <p class="credits-text">
+            Divya Rai & Ayushi Singh
+        </p>
+
+    </div> -->
+</div>
+
+{% endblock %}

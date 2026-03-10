@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block content %}
+
+<h1 class="text-center mb-5">Supported Crops & Diseases</h1>
+
+<!-- CROPS -->
+<h3 class="mb-4">Supported Crops</h3>
+
+<div class="row crop-grid">
+  <div class="col-md-3 crop-card">Apple</div>
+  <div class="col-md-3 crop-card">Blueberry</div>
+  <div class="col-md-3 crop-card">Cherry (including sour)</div>
+  <div class="col-md-3 crop-card">Corn (maize)</div>
+
+  <div class="col-md-3 crop-card">Grape</div>
+  <div class="col-md-3 crop-card">Orange</div>
+  <div class="col-md-3 crop-card">Peach</div>
+  <div class="col-md-3 crop-card">Pepper Bell</div>
+
+  <div class="col-md-3 crop-card">Potato</div>
+  <div class="col-md-3 crop-card">Raspberry</div>
+  <div class="col-md-3 crop-card">Soybean</div>
+  <div class="col-md-3 crop-card">Squash</div>
+
+  <div class="col-md-3 crop-card">Strawberry</div>
+  <div class="col-md-3 crop-card">Tomato</div>
+</div>
+
+<hr class="my-5" />
+
+<!-- DISEASES -->
+
+<h3 class="mb-4">Supported Diseases</h3>
+
+<div class="disease-container">
+  <ul id="disease-list" class="disease-list">
+    <li>Apple Scab</li>
+    <li>Apple Black Rot</li>
+    <li>Apple Cedar Apple Rust</li>
+    <li>Cherry Powdery Mildew</li>
+    <li>Corn Cercospora Leaf Spot</li>
+    <li>Corn Common Rust</li>
+    <li>Corn Northern Leaf Blight</li>
+    <li>Grape Black Rot</li>
+
+    <li class="more-disease">Grape Esca (Black Measles)</li>
+    <li class="more-disease">Grape Leaf Blight</li>
+    <li class="more-disease">Orange Citrus Greening</li>
+    <li class="more-disease">Peach Bacterial Spot</li>
+    <li class="more-disease">Pepper Bell Bacterial Spot</li>
+    <li class="more-disease">Potato Early Blight</li>
+    <li class="more-disease">Potato Late Blight</li>
+    <li class="more-disease">Squash Powdery Mildew</li>
+    <li class="more-disease">Strawberry Leaf Scorch</li>
+    <li class="more-disease">Tomato Bacterial Spot</li>
+    <li class="more-disease">Tomato Early Blight</li>
+    <li class="more-disease">Tomato Late Blight</li>
+    <li class="more-disease">Tomato Leaf Mold</li>
+    <li class="more-disease">Tomato Septoria Leaf Spot</li>
+    <li class="more-disease">Tomato Spider Mites</li>
+    <li class="more-disease">Tomato Target Spot</li>
+    <li class="more-disease">Tomato Yellow Leaf Curl Virus</li>
+    <li class="more-disease">Tomato Mosaic Virus</li>
+  </ul>
+
+  <button id="show-more-btn" class="btn btn-outline-success mt-3">
+    Show More
+  </button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- HERO SECTION -->
+<div class="hero-section text-center">
+  <h1 class="hero-title">🌿 ArogyaFasal</h1>
+
+  <p class="hero-subtitle">AI-Powered Crop Disease Detection System</p>
+
+  <p class="hero-description">
+    Upload a leaf image and let our deep learning model instantly analyze plant
+    health and detect possible crop diseases with high accuracy.
+  </p>
+
+  <a href="/detect" class="btn btn-lg btn-hero"> 🔍 Start Disease Detection </a>
+</div>
+
+<!-- FEATURES SECTION -->
+<div class="features-section">
+  <h2 class="text-center mb-4">Why Use ArogyaFasal?</h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="feature-card">
+        <h4>⚡ Instant Detection</h4>
+        <p>
+          Upload a leaf image and receive disease prediction within seconds.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-card">
+        <h4>🧠 AI Powered</h4>
+        <p>
+          Built using Convolutional Neural Networks (CNNs) trained on plant
+          disease datasets.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-card">
+        <h4>🌾 38 Crop Classes</h4>
+        <p>
+          Detect diseases across multiple crops including tomato, apple, grape
+          and more.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
