@@ -1,88 +1,128 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArogyaFasal - Crop Disease Detection</title>
 
-<title>ArogyaFasal - Crop Disease Detection</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="{{ url_for('static', filename='css/main.css') }}"
+      rel="stylesheet"
+    />
+  </head>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="/">
+          🌿 ArogyaFasal
+          <span class="brand-sub">AI Crop Health</span>
+        </a>
 
-<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-</head>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="/">
+                <i class="fas fa-home"></i> Home
+              </a>
+            </li>
 
-<body>
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="/about">
+                <i class="fas fa-info-circle"></i> About
+              </a>
+            </li>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm">
+            {% if session.get('user') %}
 
-<div class="container">
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="/detect">
+                <i class="fas fa-microscope"></i> Detect
+              </a>
+            </li>
 
-<a class="navbar-brand font-weight-bold" href="/">
-🌿 ArogyaFasal
-<span class="brand-sub">AI Crop Health</span>
-</a>
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="/diseases">
+                <i class="fas fa-seedling"></i> Crops
+              </a>
+            </li>
 
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
-</button>
+            <li class="nav-item">
+              <a class="nav-link nav-custom logout-btn" href="/logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </li>
 
-<div class="collapse navbar-collapse" id="navbarNav">
+            {% else %}
 
-<ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-custom" href="/login">
+                <i class="fas fa-sign-in-alt"></i> Login
+              </a>
+            </li>
 
-<li class="nav-item">
-<a class="nav-link nav-custom" href="/">Home</a>
-</li>
+            <li class="nav-item">
+              <a class="nav-link nav-custom register-btn" href="/register">
+                <i class="fas fa-user-plus"></i> Register
+              </a>
+            </li>
 
-<li class="nav-item">
-<a class="nav-link nav-custom" href="/detect">Detect Disease</a>
-</li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<li class="nav-item">
-<a class="nav-link nav-custom" href="/diseases">Supported Crops</a>
-</li>
+    <!-- Flash Message -->
+    <div class="container mt-3">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
 
-<li class="nav-item">
-<a class="nav-link nav-custom" href="/about">About</a>
-</li>
+      <div class="alert alert-{{category}} alert-dismissible fade show">
+        {{message}}
 
-</ul>
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+      </div>
 
-</div>
-</div>
+      {% endfor %} {% endif %} {% endwith %}
+    </div>
 
-</nav>
+    <!-- Page Content -->
+    <div class="container mt-4">{% block content %} {% endblock %}</div>
 
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <div class="container text-center">
+        <p class="footer-text">
+          Developed By <strong>Divya Rai & Ayushi Singh</strong>
+        </p>
+      </div>
+    </footer>
 
-<!-- Page Content -->
-<div class="container mt-4">
-
-{% block content %}
-
-{% endblock %}
-
-</div>
-
-
-<!-- Footer -->
-<footer class="footer mt-5">
-
-<div class="container text-center">
-
-<p class="footer-text">
-Developed By <strong>Divya Rai & Ayushi Singh</strong>
-</p>
-
-</div>
-
-</footer>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
 </html>

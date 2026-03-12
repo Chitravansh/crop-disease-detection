@@ -4,6 +4,7 @@ from config import Config
 
 from app.routes.main_routes import main
 from app.routes.prediction_routes import prediction
+from app.routes.auth_routes import auth
 
 
 def create_app():
@@ -17,5 +18,6 @@ def create_app():
     app.config.from_object(Config)
     app.register_blueprint(main)
     app.register_blueprint(prediction)
+    app.register_blueprint(auth)
 
     return app

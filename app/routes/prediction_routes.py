@@ -4,12 +4,14 @@ from werkzeug.utils import secure_filename
 
 from config import Config
 from app.services.prediction_service import model_predict
+from app.utils.auth_decorator import login_required
 
 
 prediction = Blueprint("prediction", __name__)
 
 
 @prediction.route("/predict", methods=["POST"])
+@login_required
 def predict():
 
     f = request.files["file"]

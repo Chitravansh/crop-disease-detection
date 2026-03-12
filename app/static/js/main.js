@@ -103,6 +103,11 @@ $(document).ready(function () {
     });
   }
 
+  // ---------------- FLASH MESSAGE ----------------
+  setTimeout(function () {
+    $(".alert").fadeOut("slow");
+  }, 4000);
+
   // ---------------- SHOW MORE DISEASES ----------------
 
   $("#show-more-btn").click(function () {
