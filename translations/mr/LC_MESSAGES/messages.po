@@ -1,0 +1,231 @@
+# Marathi translations for Arogyafasl.
+# Copyright (C) 2026
+# This file is distributed under the same license as the Arogyafasl project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-03-12 14:01+0530\n"
+"PO-Revision-Date: 2026-03-12 13:50+0530\n"
+"Last-Translator: Deependra\n"
+"Language: mr\n"
+"Language-Team: mr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/templates/about.html:4
+msgid "About ArogyaFasal"
+msgstr "आरोग्यफसल बद्दल"
+
+#: app/templates/about.html:7
+msgid ""
+"is an AI-powered crop disease detection\n"
+"    system designed to help farmers and agricultural researchers identify"
+" plant\n"
+"    diseases quickly using leaf images. The system uses deep learning to "
+"analyze\n"
+"    leaf patterns and detect possible infections."
+msgstr ""
+"ही एक AI-आधारित पीक रोग ओळखणारी प्रणाली आहे, जी शेतकरी आणि कृषी "
+"संशोधकांना पानांच्या छायाचित्रांच्या साहाय्याने वनस्पतींचे रोग जलद गतीने "
+"ओळखण्यास मदत करण्यासाठी विकसित केली आहे. ही प्रणाली पानांच्या रचनेचे "
+"विश्लेषण करण्यासाठी आणि संभाव्य संसर्गाचा शोध घेण्यासाठी डीप लर्निंगचा "
+"वापर करते."
+
+#: app/templates/about.html:14
+msgid "How the System works"
+msgstr "प्रणाली कशी कार्य करते"
+
+#: app/templates/about.html:18 app/templates/detect.html:3
+msgid "Upload Image"
+msgstr "छायाचित्र अपलोड करा"
+
+#: app/templates/about.html:19
+msgid "User uploads a leaf image using the web interface."
+msgstr "वापरकर्ता वेब इंटरफेस वापरून पानाचे छायाचित्र अपलोड करतो."
+
+#: app/templates/about.html:23
+msgid "AI Analysis"
+msgstr "AI विश्लेषण"
+
+#: app/templates/about.html:24
+msgid "The CNN model analyzes visual patterns in the leaf."
+msgstr "CNN मॉडेल पानामधील विझ्युअल पॅटर्नचे विश्लेषण करते."
+
+#: app/templates/about.html:28
+msgid "Disease Detection"
+msgstr "रोग ओळखणे"
+
+#: app/templates/about.html:29
+msgid "The model predicts crop type and disease class."
+msgstr "मॉडेल पिकाचा प्रकार आणि रोगाच्या श्रेणीचा अंदाज लावते."
+
+#: app/templates/about.html:35
+msgid "Key Features"
+msgstr "प्रमुख वैशिष्ट्ये"
+
+#: app/templates/base.html:45
+msgid "Home"
+msgstr "मुख्य पान"
+
+#: app/templates/base.html:51
+msgid "About"
+msgstr "आमच्याबद्दल"
+
+#: app/templates/base.html:60
+msgid "Language"
+msgstr "भाषा"
+
+#: app/templates/base.html:64
+msgid "English"
+msgstr "English"
+
+#: app/templates/base.html:67
+msgid "Hindi"
+msgstr "हिंदी"
+
+#: app/templates/base.html:70
+msgid "Marathi"
+msgstr "मराठी"
+
+#: app/templates/base.html:72
+msgid "Punjabi"
+msgstr "पंजाबी"
+
+#: app/templates/base.html:81
+msgid "Detect"
+msgstr "ओळखा"
+
+#: app/templates/base.html:87
+msgid "Crops"
+msgstr "पिके"
+
+#: app/templates/base.html:93
+msgid "Logout"
+msgstr "लॉग आउट"
+
+#: app/templates/base.html:101 app/templates/login.html:30
+#: app/templates/register.html:56
+msgid "Login"
+msgstr "लॉगिन"
+
+#: app/templates/base.html:107 app/templates/login.html:37
+#: app/templates/register.html:49
+msgid "Register"
+msgstr "नोंदणी करा"
+
+#: app/templates/detect.html:7
+msgid "Drag & Drop here"
+msgstr "येथे ड्रॅग आणि ड्रॉप करा"
+
+#: app/templates/detect.html:8
+msgid "or"
+msgstr "किंवा"
+
+#: app/templates/detect.html:11
+msgid "Choose Image"
+msgstr "छायाचित्र निवडा"
+
+#: app/templates/detect.html:24
+msgid "Detect Disease"
+msgstr "रोगाचा शोध घ्या"
+
+#: app/templates/diseases.html:3
+msgid "Supported Crops & Diseases"
+msgstr "समर्थित पिके आणि रोग"
+
+#: app/templates/diseases.html:6
+msgid "Supported Crops"
+msgstr "समर्थित पिके"
+
+#: app/templates/diseases.html:32
+msgid "Supported Diseases"
+msgstr "समर्थित रोग"
+
+#: app/templates/diseases.html:66
+msgid "Show more"
+msgstr "अधिक पहा"
+
+#: app/templates/home.html:10
+msgid ""
+"Upload a leaf image and let our deep learning model instantly analyze\n"
+"    plant health and detect possible crop diseases with high accuracy."
+msgstr ""
+"पानाचे छायाचित्र अपलोड करा आणि आमच्या Deep Learning मॉडेलला त्वरित रोपाच्या आरोग्याचे "
+"विश्लेषण करू द्या आणि उच्च अचूकतेसह संभाव्य पीक रोगांचा शोध घेऊ द्या."
+
+#: app/templates/home.html:15
+msgid ""
+"Start Disease\n"
+"    Detection"
+msgstr "रोग तपासणी सुरू करा"
+
+#: app/templates/home.html:22
+msgid "Why Use ArogyaFasal?"
+msgstr "आरोग्यफसल का वापरावे?"
+
+#: app/templates/home.html:27
+msgid "Instant Detection"
+msgstr "झटपट तपासणी"
+
+#: app/templates/home.html:29
+msgid ""
+"Upload a leaf image and receive disease prediction within\n"
+"          seconds."
+msgstr ""
+"पानाचे छायाचित्र अपलोड करा आणि काही सेकंदात रोगाचा अंदाज मिळवा."
+
+#: app/templates/home.html:37
+msgid "AI Powered"
+msgstr "AI समर्थित"
+
+#: app/templates/home.html:39
+msgid ""
+"Built using Convolutional Neural Networks (CNNs) trained on\n"
+"          plant disease datasets."
+msgstr ""
+"वनस्पती रोग डेटासेटवर प्रशिक्षित Convolutional Neural Networks (CNNs) वापरून तयार केले आहे."
+
+#: app/templates/home.html:47
+msgid "38 Crop Classes"
+msgstr "३८ पीक श्रेणी"
+
+#: app/templates/home.html:49
+msgid ""
+"Detect diseases across multiple crops including tomato, apple,\n"
+"          grape and more."
+msgstr ""
+"टोमॅटो, सफरचंद, द्राक्षे इतर आणि अनेक पिकांमधील रोगांचा शोध घ्या."
+
+#: app/templates/login.html:8 app/templates/register.html:16
+msgid "E-mail"
+msgstr "ई-मेल"
+
+#: app/templates/login.html:19 app/templates/register.html:27
+msgid "Password"
+msgstr "पासवर्ड"
+
+#: app/templates/login.html:35
+msgid "Don't have an account"
+msgstr "खाते नाही का?"
+
+#: app/templates/register.html:5
+msgid "Create Account"
+msgstr "खाते तयार करा"
+
+#: app/templates/register.html:10
+msgid "Name"
+msgstr "नाव"
+
+#: app/templates/register.html:38
+msgid "Location"
+msgstr "ठिकाण"
+
+#: app/templates/register.html:54
+msgid "Already registered"
+msgstr "आधीच नोंदणी केली आहे?"
+

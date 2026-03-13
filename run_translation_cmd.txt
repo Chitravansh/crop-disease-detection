@@ -1,0 +1,6 @@
+1.  pybabel extract -F babel.cfg -o messages.pot .
+2.  pybabel update -i messages.pot -d translations
+3.  pybabel compile -d translations
+
+Always follow this format for Flask-Babel Translations:
+    {{ _('Text Here') }}

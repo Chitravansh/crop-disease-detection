@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block content %}
 
-<h1 class="text-center mb-5">Supported Crops & Diseases</h1>
+<h1 class="text-center mb-5">{{ _('Supported Crops & Diseases') }}</h1>
 
 <!-- CROPS -->
-<h3 class="mb-4">Supported Crops</h3>
+<h3 class="mb-4">{{ _('Supported Crops') }}</h3>
 
 <div class="row crop-grid">
   <div class="col-md-3 crop-card">Apple</div>
@@ -29,7 +29,7 @@
 
 <!-- DISEASES -->
 
-<h3 class="mb-4">Supported Diseases</h3>
+<h3 class="mb-4">{{ _('Supported Diseases') }}</h3>
 
 <div class="disease-container">
   <ul id="disease-list" class="disease-list">
@@ -63,7 +63,7 @@
   </ul>
 
   <button id="show-more-btn" class="btn btn-outline-success mt-3">
-    Show More
+    {{ _('Show more') }}
   </button>
 </div>
 
