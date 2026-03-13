@@ -1,0 +1,13 @@
+Model: It uses a custom implementation of the AlexNet architecture, 
+        a famous Convolutional Neural Network (CNN).
+
+ _________________________________________________________________
+|   Component       |    Purpose                                  |
+|___________________|_____________________________________________|
+|   Input Shape     |    224 x 224 pixels (RGB)                   |
+|   Architecture    |    AlexNet (Custom)                         |
+|   Task Type       |    Multi-class Classification (38 classes)  |
+|   Loss Function   |    Categorical Crossentropy                 |
+|   Key Library     |    Keras (TensorFlow backend)               |
+|___________________|_____________________________________________|
+

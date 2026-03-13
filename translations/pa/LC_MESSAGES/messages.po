@@ -1,0 +1,230 @@
+# Punjabi translations for Arogyafasl.
+# Copyright (C) 2026
+# This file is distributed under the same license as the Arogyafasl project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-03-12 14:01+0530\n"
+"PO-Revision-Date: 2026-03-12 13:55+0530\n"
+"Last-Translator: Deependra\n"
+"Language: pa\n"
+"Language-Team: pa <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/templates/about.html:4
+msgid "About ArogyaFasal"
+msgstr "ਅਰੋਗਿਆ ਫਸਲ ਬਾਰੇ"
+
+#: app/templates/about.html:7
+msgid ""
+"is an AI-powered crop disease detection\n"
+"    system designed to help farmers and agricultural researchers identify"
+" plant\n"
+"    diseases quickly using leaf images. The system uses deep learning to "
+"analyze\n"
+"    leaf patterns and detect possible infections."
+msgstr ""
+"ਇੱਕ AI-ਅਧਾਰਿਤ ਫਸਲ ਰੋਗ ਪਛਾਣ ਪ੍ਰਣਾਲੀ ਹੈ ਜੋ ਕਿਸਾਨਾਂ ਅਤੇ ਖੇਤੀਬਾੜੀ ਖੋਜਕਰਤਾਵਾਂ "
+"ਨੂੰ ਪੱਤਿਆਂ ਦੀਆਂ ਤਸਵੀਰਾਂ ਰਾਹੀਂ ਪੌਦਿਆਂ ਦੀਆਂ ਬਿਮਾਰੀਆਂ ਦੀ ਜਲਦੀ ਪਛਾਣ ਕਰਨ ਵਿੱਚ "
+"ਮਦਦ ਕਰਨ ਲਈ ਤਿਆਰ ਕੀਤੀ ਗਈ ਹੈ। ਇਹ ਸਿਸਟਮ ਪੱਤਿਆਂ ਦੇ ਪੈਟਰਨਾਂ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ "
+"ਅਤੇ ਸੰਭਾਵਿਤ ਸੰਕਰਮਣਾਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਲਈ ਡੀਪ ਲਰਨਿੰਗ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ।"
+
+#: app/templates/about.html:14
+msgid "How the System works"
+msgstr "ਸਿਸਟਮ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ"
+
+#: app/templates/about.html:18 app/templates/detect.html:3
+msgid "Upload Image"
+msgstr "ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ"
+
+#: app/templates/about.html:19
+msgid "User uploads a leaf image using the web interface."
+msgstr "ਉਪਭੋਗਤਾ ਵੈੱਬ ਇੰਟਰਫੇਸ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰਦਾ ਹੈ।"
+
+#: app/templates/about.html:23
+msgid "AI Analysis"
+msgstr "AI ਵਿਸ਼ਲੇਸ਼ਣ"
+
+#: app/templates/about.html:24
+msgid "The CNN model analyzes visual patterns in the leaf."
+msgstr "CNN ਮਾਡਲ ਪੱਤੇ ਵਿੱਚ ਵਿਜ਼ੂਅਲ ਪੈਟਰਨਾਂ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਦਾ ਹੈ।"
+
+#: app/templates/about.html:28
+msgid "Disease Detection"
+msgstr "ਬਿਮਾਰੀ ਦੀ ਪਛਾਣ"
+
+#: app/templates/about.html:29
+msgid "The model predicts crop type and disease class."
+msgstr "ਮਾਡਲ ਫਸਲ ਦੀ ਕਿਸਮ ਅਤੇ ਬਿਮਾਰੀ ਦੀ ਸ਼੍ਰੇਣੀ ਦੀ ਭਵਿੱਖਬਾਣੀ ਕਰਦਾ ਹੈ।"
+
+#: app/templates/about.html:35
+msgid "Key Features"
+msgstr "ਮੁੱਖ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+
+#: app/templates/base.html:45
+msgid "Home"
+msgstr "ਮੁੱਖ ਪੰਨਾ"
+
+#: app/templates/base.html:51
+msgid "About"
+msgstr "ਸਾਡੇ ਬਾਰੇ"
+
+#: app/templates/base.html:60
+msgid "Language"
+msgstr "ਭਾਸ਼ਾ"
+
+#: app/templates/base.html:64
+msgid "English"
+msgstr "English"
+
+#: app/templates/base.html:67
+msgid "Hindi"
+msgstr "हिन्दी"
+
+#: app/templates/base.html:70
+msgid "Marathi"
+msgstr "मराठी"
+
+#: app/templates/base.html:72
+msgid "Punjabi"
+msgstr "ਪੰਜਾਬੀ"
+
+#: app/templates/base.html:81
+msgid "Detect"
+msgstr "ਪਛਾਣ ਕਰੋ"
+
+#: app/templates/base.html:87
+msgid "Crops"
+msgstr "ਫਸਲਾਂ"
+
+#: app/templates/base.html:93
+msgid "Logout"
+msgstr "ਲੌਗ ਆਊਟ"
+
+#: app/templates/base.html:101 app/templates/login.html:30
+#: app/templates/register.html:56
+msgid "Login"
+msgstr "ਲੌਗਇਨ"
+
+#: app/templates/base.html:107 app/templates/login.html:37
+#: app/templates/register.html:49
+msgid "Register"
+msgstr "ਰਜਿਸਟਰ ਕਰੋ"
+
+#: app/templates/detect.html:7
+msgid "Drag & Drop here"
+msgstr "ਇੱਥੇ ਖਿੱਚੋ ਅਤੇ ਛੱਡੋ"
+
+#: app/templates/detect.html:8
+msgid "or"
+msgstr "ਜਾਂ"
+
+#: app/templates/detect.html:11
+msgid "Choose Image"
+msgstr "ਤਸਵੀਰ ਚੁਣੋ"
+
+#: app/templates/detect.html:24
+msgid "Detect Disease"
+msgstr "ਬਿਮਾਰੀ ਦੀ ਪਛਾਣ ਕਰੋ"
+
+#: app/templates/diseases.html:3
+msgid "Supported Crops & Diseases"
+msgstr "ਸਮਰਥਿਤ ਫਸਲਾਂ ਅਤੇ ਬਿਮਾਰੀਆਂ"
+
+#: app/templates/diseases.html:6
+msgid "Supported Crops"
+msgstr "ਸਮਰਥਿਤ ਫਸਲਾਂ"
+
+#: app/templates/diseases.html:32
+msgid "Supported Diseases"
+msgstr "ਸਮਰਥਿਤ ਬਿਮਾਰੀਆਂ"
+
+#: app/templates/diseases.html:66
+msgid "Show more"
+msgstr "ਹੋਰ ਦੇਖੋ"
+
+#: app/templates/home.html:10
+msgid ""
+"Upload a leaf image and let our deep learning model instantly analyze\n"
+"    plant health and detect possible crop diseases with high accuracy."
+msgstr ""
+"ਇੱਕ ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਾਡੇ Deep Learning ਮਾਡਲ ਨੂੰ ਤੁਰੰਤ ਪੌਦੇ ਦੀ ਸਿਹਤ ਦਾ "
+"ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਦਿਓ ਅਤੇ ਉੱਚ ਸ਼ੁੱਧਤਾ ਨਾਲ ਸੰਭਾਵਿਤ ਫਸਲੀ ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਦਿਓ।"
+
+#: app/templates/home.html:15
+msgid ""
+"Start Disease\n"
+"    Detection"
+msgstr "ਬਿਮਾਰੀ ਦੀ ਪਛਾਣ ਸ਼ੁਰੂ ਕਰੋ"
+
+#: app/templates/home.html:22
+msgid "Why Use ArogyaFasal?"
+msgstr "ਅਰੋਗਿਆ ਫਸਲ ਦੀ ਵਰਤੋਂ ਕਿਉਂ ਕਰੀਏ?"
+
+#: app/templates/home.html:27
+msgid "Instant Detection"
+msgstr "ਤੁਰੰਤ ਪਛਾਣ"
+
+#: app/templates/home.html:29
+msgid ""
+"Upload a leaf image and receive disease prediction within\n"
+"          seconds."
+msgstr ""
+"ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਕਿੰਟਾਂ ਵਿੱਚ ਬਿਮਾਰੀ ਦੀ ਭਵਿੱਖਬਾਣੀ ਪ੍ਰਾਪਤ ਕਰੋ।"
+
+#: app/templates/home.html:37
+msgid "AI Powered"
+msgstr "AI ਦੁਆਰਾ ਸੰਚਾਲਿਤ"
+
+#: app/templates/home.html:39
+msgid ""
+"Built using Convolutional Neural Networks (CNNs) trained on\n"
+"          plant disease datasets."
+msgstr ""
+"ਪੌਦਿਆਂ ਦੀ ਬਿਮਾਰੀ ਦੇ ਡੇਟਾਸੈਟਾਂ 'ਤੇ ਸਿਖਲਾਈ ਪ੍ਰਾਪਤ Convolutional Neural Networks (CNNs) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਬਣਾਇਆ ਗਿਆ ਹੈ।"
+
+#: app/templates/home.html:47
+msgid "38 Crop Classes"
+msgstr "38 ਫਸਲ ਸ਼੍ਰੇਣੀਆਂ"
+
+#: app/templates/home.html:49
+msgid ""
+"Detect diseases across multiple crops including tomato, apple,\n"
+"          grape and more."
+msgstr ""
+"ਟਮਾਟਰ, ਸੇਬ, ਅੰਗੂਰ ਅਤੇ ਹੋਰ ਸਮੇਤ ਕਈ ਫਸਲਾਂ ਵਿੱਚ ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਓ।"
+
+#: app/templates/login.html:8 app/templates/register.html:16
+msgid "E-mail"
+msgstr "ਈ-ਮੇਲ"
+
+#: app/templates/login.html:19 app/templates/register.html:27
+msgid "Password"
+msgstr "ਪਾਸਵਰਡ"
+
+#: app/templates/login.html:35
+msgid "Don't have an account"
+msgstr "ਖਾਤਾ ਨਹੀਂ ਹੈ?"
+
+#: app/templates/register.html:5
+msgid "Create Account"
+msgstr "ਖਾਤਾ ਬਣਾਓ"
+
+#: app/templates/register.html:10
+msgid "Name"
+msgstr "ਨਾਮ"
+
+#: app/templates/register.html:38
+msgid "Location"
+msgstr "ਸਥਾਨ"
+
+#: app/templates/register.html:54
+msgid "Already registered"
+msgstr "ਪਹਿਲਾਂ ਹੀ ਰਜਿਸਟਰਡ ਹੋ?"
+

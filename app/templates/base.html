@@ -42,33 +42,55 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link nav-custom" href="/">
-                <i class="fas fa-home"></i> Home
+                <i class="fas fa-home"></i> {{ _('Home') }}
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link nav-custom" href="/about">
-                <i class="fas fa-info-circle"></i> About
+                <i class="fas fa-info-circle"></i> {{ _('About') }}
               </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle nav-custom"
+                data-toggle="dropdown"
+              >
+                <i class="fas fa-globe"></i> {{ _('Language') }}
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/set-language/en">
+                  {{ _("English") }}</a
+                >
+                <a class="dropdown-item" href="/set-language/hi"
+                  >{{ _("Hindi") }}</a
+                >
+                <a class="dropdown-item" href="/set-language/mr"
+                  >{{ _("Marathi") }}</a
+                ><a class="dropdown-item" href="/set-language/pa"
+                  >{{ _("Punjabi") }}</a
+                >
+              </div>
             </li>
 
             {% if session.get('user') %}
 
             <li class="nav-item">
               <a class="nav-link nav-custom" href="/detect">
-                <i class="fas fa-microscope"></i> Detect
+                <i class="fas fa-microscope"></i> {{ _('Detect') }}
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link nav-custom" href="/diseases">
-                <i class="fas fa-seedling"></i> Crops
+                <i class="fas fa-seedling"></i> {{ _('Crops') }}
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link nav-custom logout-btn" href="/logout">
-                <i class="fas fa-sign-out-alt"></i> Logout
+                <i class="fas fa-sign-out-alt"></i> {{ _('Logout') }}
               </a>
             </li>
 
@@ -76,13 +98,13 @@
 
             <li class="nav-item">
               <a class="nav-link nav-custom" href="/login">
-                <i class="fas fa-sign-in-alt"></i> Login
+                <i class="fas fa-sign-in-alt"></i> {{ _('Login') }}
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link nav-custom register-btn" href="/register">
-                <i class="fas fa-user-plus"></i> Register
+                <i class="fas fa-user-plus"></i> {{ _('Register') }}
               </a>
             </li>
 

@@ -1,13 +1,15 @@
 {% extends "base.html" %} {% block content %}
 
-<h2 class="text-center mb-4">Upload Leaf Image</h2>
+<h2 class="text-center mb-4">{{ _('Upload Image') }}</h2>
 
 <form id="upload-file" method="post" enctype="multipart/form-data">
   <div class="upload-area" id="drop-area">
-    <p>Drag & Drop Leaf Image Here</p>
-    <p>or</p>
+    <p>{{ _('Drag & Drop here') }}</p>
+    <p>{{ _('or') }}</p>
 
-    <label for="imageUpload" class="upload-label"> Choose Image </label>
+    <label for="imageUpload" class="upload-label">
+      {{ _('Choose Image') }}
+    </label>
 
     <input type="file" name="file" id="imageUpload" accept=".png,.jpg,.jpeg" />
   </div>
@@ -19,7 +21,7 @@
   </div>
 
   <button class="btn btn-success btn-lg" id="btn-predict">
-    Detect Disease
+    {{ _('Detect Disease') }}
   </button>
 </div>
 
