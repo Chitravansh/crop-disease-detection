@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="chat-wrapper">
+  <h3 class="text-center mb-3">🌿 ArogyaFasal Assistant</h3>
+
+  <div id="chat-box" class="chat-box"></div>
+
+  <div class="chat-input-container">
+    <input
+      id="user-input"
+      class="form-control"
+      placeholder="{{ _('Ask about crops, diseases, fertilizers...') }}"
+    />
+
+    <button id="send-btn" class="btn btn-success">{{ _('Send') }}</button>
+  </div>
+</div>
+
+<!-- Markdown parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+
+{% endblock %}

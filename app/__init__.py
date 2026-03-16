@@ -6,16 +6,11 @@ from app.routes.main_routes import main
 from app.routes.prediction_routes import prediction
 from app.routes.auth_routes import auth
 from app.routes.language_routes import language
+from app.routes.chatbot_routes import chatbot
 
 babel = Babel()
 
 
-# def get_locale():
-
-#     if "language" in session:
-#         return session["language"]
-
-#     return "en"
 def get_locale():
 
     if "language" in session:
@@ -47,5 +42,6 @@ def create_app():
     app.register_blueprint(prediction)
     app.register_blueprint(auth)
     app.register_blueprint(language)
+    app.register_blueprint(chatbot)
 
     return app
