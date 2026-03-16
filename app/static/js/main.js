@@ -120,3 +120,39 @@ $(document).ready(function () {
     }
   });
 });
+
+// ---------------- EXPERT PAGE FEATURES ----------------
+
+// show more local experts
+
+$("#show-more-local").click(function () {
+  $(".extra-local").toggleClass("d-none");
+
+  if ($(this).text() === "Show More") {
+    $(this).text("Show Less");
+  } else {
+    $(this).text("Show More");
+  }
+});
+
+// show more global experts
+
+$("#show-more-global").click(function () {
+  $(".extra-global").toggleClass("d-none");
+
+  if ($(this).text() === "Show More") {
+    $(this).text("Show Less");
+  } else {
+    $(this).text("Show More");
+  }
+});
+
+// expert search
+
+$("#expert-search").on("keyup", function () {
+  let value = $(this).val().toLowerCase();
+
+  $(".expert-card-wrapper").filter(function () {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+  });
+});

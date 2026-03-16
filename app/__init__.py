@@ -7,6 +7,8 @@ from app.routes.prediction_routes import prediction
 from app.routes.auth_routes import auth
 from app.routes.language_routes import language
 from app.routes.chatbot_routes import chatbot
+from app.routes.expert_routes import experts_bp
+
 
 babel = Babel()
 
@@ -43,5 +45,6 @@ def create_app():
     app.register_blueprint(auth)
     app.register_blueprint(language)
     app.register_blueprint(chatbot)
+    app.register_blueprint(experts_bp)
 
     return app

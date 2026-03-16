@@ -505,6 +505,76 @@ input[type="file"] {
   letter-spacing: 0.4px;
 }
 
+/* ---------- EXPERT SYSTEM ---------- */
+
+.expert-search-box {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.expert-search-input {
+  border-radius: 30px;
+  padding: 10px 18px;
+  border: 2px solid var(--green-soft);
+  transition: 0.25s;
+}
+
+.expert-search-input:focus {
+  border-color: var(--green-primary);
+  box-shadow: 0 0 6px rgba(82, 164, 71, 0.4);
+}
+
+/* expert card */
+
+.expert-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  border-left: 5px solid var(--green-primary);
+}
+
+.expert-card:hover {
+  transform: translateY(-6px);
+  background: var(--green-card);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.expert-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.expert-org {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.expert-info {
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* see more button */
+
+.expert-more-btn {
+  margin-top: 15px;
+  border-radius: 25px;
+  padding: 8px 20px;
+  background: var(--green-primary);
+  color: white;
+  border: none;
+  transition: 0.25s;
+}
+
+.expert-more-btn:hover {
+  background: var(--green-dark);
+}
+
 /* ---------- ANIMATIONS ---------- */
 
 @keyframes chatOpen {
