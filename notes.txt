@@ -11,3 +11,12 @@ Model: It uses a custom implementation of the AlexNet architecture,
 |   Key Library     |    Keras (TensorFlow backend)               |
 |___________________|_____________________________________________|
 
+
+Weather source: Open-Meteo API
+Reason:
+        1. Free
+        2. No API key
+        3. Fast
+        4. Good agricultural weather data
+
+ChatBot: Groq API

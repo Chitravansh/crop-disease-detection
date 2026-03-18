@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version:  1.0\n"
+"Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-12 14:01+0530\n"
-"PO-Revision-Date: 2026-03-12 13:55+0530\n"
+"POT-Creation-Date: 2026-03-14 13:07+0530\n"
+"PO-Revision-Date: 2026-03-14 13:12+0530\n"
 "Last-Translator: Deependra\n"
 "Language: pa\n"
 "Language-Team: pa <LL@li.org>\n"
@@ -85,11 +85,11 @@ msgstr "English"
 
 #: app/templates/base.html:67
 msgid "Hindi"
-msgstr "हिन्दी"
+msgstr "ਹਿੰਦੀ"
 
 #: app/templates/base.html:70
 msgid "Marathi"
-msgstr "मराठी"
+msgstr "ਮਰਾਠੀ"
 
 #: app/templates/base.html:72
 msgid "Punjabi"
@@ -100,22 +100,42 @@ msgid "Detect"
 msgstr "ਪਛਾਣ ਕਰੋ"
 
 #: app/templates/base.html:87
+msgid "Assistant"
+msgstr "ਸਹਾਇਕ"
+
+#: app/templates/base.html:93
+msgid "Experts"
+msgstr "ਮਾਹਿਰ"
+
+#: app/templates/base.html:100
+msgid "Weather"
+msgstr "ਮੌਸਮ"
+
+#: app/templates/base.html:106
 msgid "Crops"
 msgstr "ਫਸਲਾਂ"
 
-#: app/templates/base.html:93
+#: app/templates/base.html:112
 msgid "Logout"
 msgstr "ਲੌਗ ਆਊਟ"
 
-#: app/templates/base.html:101 app/templates/login.html:30
+#: app/templates/base.html:120 app/templates/login.html:30
 #: app/templates/register.html:56
 msgid "Login"
 msgstr "ਲੌਗਇਨ"
 
-#: app/templates/base.html:107 app/templates/login.html:37
+#: app/templates/base.html:126 app/templates/login.html:37
 #: app/templates/register.html:49
 msgid "Register"
 msgstr "ਰਜਿਸਟਰ ਕਰੋ"
+
+#: app/templates/chatbot.html:12
+msgid "Ask about crops, diseases, fertilizers..."
+msgstr "ਫਸਲਾਂ, ਬਿਮਾਰੀਆਂ, ਖਾਦਾਂ ਬਾਰੇ ਪੁੱਛੋ..."
+
+#: app/templates/chatbot.html:15
+msgid "Send"
+msgstr "ਭੇਜੋ"
 
 #: app/templates/detect.html:7
 msgid "Drag & Drop here"
@@ -149,13 +169,38 @@ msgstr "ਸਮਰਥਿਤ ਬਿਮਾਰੀਆਂ"
 msgid "Show more"
 msgstr "ਹੋਰ ਦੇਖੋ"
 
+#: app/templates/experts.html:4
+msgid "Agricultural Experts"
+msgstr "ਖੇਤੀਬਾੜੀ ਮਾਹਿਰ"
+
+#: app/templates/experts.html:11
+msgid "Search by doctor, organization, or expertise..."
+msgstr "ਡਾਕਟਰ, ਸੰਸਥਾ ਜਾਂ ਮਹਾਰਤ ਦੁਆਰਾ ਖੋਜੋ..."
+
+#: app/templates/experts.html:15
+msgid "Local Experts Near You"
+msgstr "ਤੁਹਾਡੇ ਨੇੜੇ ਦੇ ਸਥਾਨਕ ਮਾਹਿਰ"
+
+#: app/templates/experts.html:27 app/templates/experts.html:64
+msgid "Expertise"
+msgstr "ਮਹਾਰਤ"
+
+#: app/templates/experts.html:46 app/templates/experts.html:83
+msgid "Show More"
+msgstr "ਹੋਰ ਦੇਖੋ"
+
+#: app/templates/experts.html:52
+msgid "National / Global Experts"
+msgstr "ਰਾਸ਼ਟਰੀ / ਗਲੋਬਲ ਮਾਹਿਰ"
+
 #: app/templates/home.html:10
 msgid ""
 "Upload a leaf image and let our deep learning model instantly analyze\n"
 "    plant health and detect possible crop diseases with high accuracy."
 msgstr ""
-"ਇੱਕ ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਾਡੇ Deep Learning ਮਾਡਲ ਨੂੰ ਤੁਰੰਤ ਪੌਦੇ ਦੀ ਸਿਹਤ ਦਾ "
-"ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਦਿਓ ਅਤੇ ਉੱਚ ਸ਼ੁੱਧਤਾ ਨਾਲ ਸੰਭਾਵਿਤ ਫਸਲੀ ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਦਿਓ।"
+"ਇੱਕ ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਾਡੇ Deep Learning ਮਾਡਲ ਨੂੰ ਤੁਰੰਤ ਪੌਦੇ ਦੀ"
+" ਸਿਹਤ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਦਿਓ ਅਤੇ ਉੱਚ ਸ਼ੁੱਧਤਾ ਨਾਲ ਸੰਭਾਵਿਤ ਫਸਲੀ ਬਿਮਾਰੀਆਂ ਦਾ "
+"ਪਤਾ ਲਗਾਉਣ ਦਿਓ।"
 
 #: app/templates/home.html:15
 msgid ""
@@ -175,8 +220,7 @@ msgstr "ਤੁਰੰਤ ਪਛਾਣ"
 msgid ""
 "Upload a leaf image and receive disease prediction within\n"
 "          seconds."
-msgstr ""
-"ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਕਿੰਟਾਂ ਵਿੱਚ ਬਿਮਾਰੀ ਦੀ ਭਵਿੱਖਬਾਣੀ ਪ੍ਰਾਪਤ ਕਰੋ।"
+msgstr "ਪੱਤੇ ਦੀ ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਕਿੰਟਾਂ ਵਿੱਚ ਬਿਮਾਰੀ ਦੀ ਭਵਿੱਖਬਾਣੀ ਪ੍ਰਾਪਤ ਕਰੋ।"
 
 #: app/templates/home.html:37
 msgid "AI Powered"
@@ -187,7 +231,8 @@ msgid ""
 "Built using Convolutional Neural Networks (CNNs) trained on\n"
 "          plant disease datasets."
 msgstr ""
-"ਪੌਦਿਆਂ ਦੀ ਬਿਮਾਰੀ ਦੇ ਡੇਟਾਸੈਟਾਂ 'ਤੇ ਸਿਖਲਾਈ ਪ੍ਰਾਪਤ Convolutional Neural Networks (CNNs) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਬਣਾਇਆ ਗਿਆ ਹੈ।"
+"ਪੌਦਿਆਂ ਦੀ ਬਿਮਾਰੀ ਦੇ ਡੇਟਾਸੈਟਾਂ 'ਤੇ ਸਿਖਲਾਈ ਪ੍ਰਾਪਤ Convolutional Neural "
+"Networks (CNNs) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਬਣਾਇਆ ਗਿਆ ਹੈ।"
 
 #: app/templates/home.html:47
 msgid "38 Crop Classes"
@@ -197,8 +242,7 @@ msgstr "38 ਫਸਲ ਸ਼੍ਰੇਣੀਆਂ"
 msgid ""
 "Detect diseases across multiple crops including tomato, apple,\n"
 "          grape and more."
-msgstr ""
-"ਟਮਾਟਰ, ਸੇਬ, ਅੰਗੂਰ ਅਤੇ ਹੋਰ ਸਮੇਤ ਕਈ ਫਸਲਾਂ ਵਿੱਚ ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਓ।"
+msgstr "ਟਮਾਟਰ, ਸੇਬ, ਅੰਗੂਰ ਅਤੇ ਹੋਰ ਸਮੇਤ ਕਈ ਫਸਲਾਂ ਵਿੱਚ ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਓ।"
 
 #: app/templates/login.html:8 app/templates/register.html:16
 msgid "E-mail"
@@ -228,3 +272,38 @@ msgstr "ਸਥਾਨ"
 msgid "Already registered"
 msgstr "ਪਹਿਲਾਂ ਹੀ ਰਜਿਸਟਰਡ ਹੋ?"
 
+#: app/templates/weather.html:6
+msgid ""
+"Weather\n"
+"      Intelligence"
+msgstr "ਮੌਸਮ ਦੀ ਜਾਣਕਾਰੀ"
+
+#: app/templates/weather.html:10
+msgid ""
+"Real-time farming weather insights to support crop health and\n"
+"      planning"
+msgstr "ਫਸਲ ਦੀ ਸਿਹਤ ਅਤੇ ਯੋਜਨਾਬੰਦੀ ਵਿੱਚ ਸਹਾਇਤਾ ਲਈ ਰੀਅਲ-ਟਾਈਮ ਖੇਤੀਬਾੜੀ ਮੌਸਮ ਦੀ ਜਾਣਕਾਰੀ"
+
+#: app/templates/weather.html:19
+msgid "Temperature"
+msgstr "ਤਾਪਮਾਨ"
+
+#: app/templates/weather.html:27
+msgid "Humidity"
+msgstr "ਨਮੀ"
+
+#: app/templates/weather.html:35 app/templates/weather.html:69
+msgid "Rain Probability"
+msgstr "ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ"
+
+#: app/templates/weather.html:43
+msgid "Wind Speed"
+msgstr "ਹਵਾ ਦੀ ਗਤੀ"
+
+#: app/templates/weather.html:50
+msgid "7-Day Forecast"
+msgstr "7-ਦਿਨਾਂ ਦਾ ਪੂਰਵ ਅਨੁਮਾਨ"
+
+#: app/templates/weather.html:59
+msgid "Today"
+msgstr "ਅੱਜ"

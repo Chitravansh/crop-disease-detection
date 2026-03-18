@@ -1,6 +1,9 @@
+ 
 import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
+# from keras.utils import load_img, img_to_array
+
 
 from app.data.disease_labels import disease_labels
 from config import Config

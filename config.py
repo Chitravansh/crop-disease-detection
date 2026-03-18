@@ -7,6 +7,7 @@ load_dotenv()
 class Config:
 
     SECRET_KEY = os.getenv("SECRET_KEY")
+    # MODEL_PATH = "ArogyaFasal_Final.h5"
     MODEL_PATH = "Model.hdf5"
     UPLOAD_FOLDER = "uploads"
     MONGO_URI = os.getenv("MONGO_URI")

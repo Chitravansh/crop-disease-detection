@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version:  1.0\n"
+"Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-12 14:01+0530\n"
-"PO-Revision-Date: 2026-03-12 13:50+0530\n"
+"POT-Creation-Date: 2026-03-14 13:07+0530\n"
+"PO-Revision-Date: 2026-03-14 13:16+0530\n"
 "Last-Translator: Deependra\n"
 "Language: mr\n"
 "Language-Team: mr <LL@li.org>\n"
@@ -101,22 +101,42 @@ msgid "Detect"
 msgstr "ओळखा"
 
 #: app/templates/base.html:87
+msgid "Assistant"
+msgstr "सहाय्यक"
+
+#: app/templates/base.html:93
+msgid "Experts"
+msgstr "तज्ञ"
+
+#: app/templates/base.html:100
+msgid "Weather"
+msgstr "हवामान"
+
+#: app/templates/base.html:106
 msgid "Crops"
 msgstr "पिके"
 
-#: app/templates/base.html:93
+#: app/templates/base.html:112
 msgid "Logout"
 msgstr "लॉग आउट"
 
-#: app/templates/base.html:101 app/templates/login.html:30
+#: app/templates/base.html:120 app/templates/login.html:30
 #: app/templates/register.html:56
 msgid "Login"
 msgstr "लॉगिन"
 
-#: app/templates/base.html:107 app/templates/login.html:37
+#: app/templates/base.html:126 app/templates/login.html:37
 #: app/templates/register.html:49
 msgid "Register"
 msgstr "नोंदणी करा"
+
+#: app/templates/chatbot.html:12
+msgid "Ask about crops, diseases, fertilizers..."
+msgstr "पिके, रोग, खते याबद्दल विचारा..."
+
+#: app/templates/chatbot.html:15
+msgid "Send"
+msgstr "पाठवा"
 
 #: app/templates/detect.html:7
 msgid "Drag & Drop here"
@@ -150,13 +170,38 @@ msgstr "समर्थित रोग"
 msgid "Show more"
 msgstr "अधिक पहा"
 
+#: app/templates/experts.html:4
+msgid "Agricultural Experts"
+msgstr "कृषी तज्ञ"
+
+#: app/templates/experts.html:11
+msgid "Search by doctor, organization, or expertise..."
+msgstr "डॉक्टर, संस्था किंवा कौशल्याद्वारे शोधा..."
+
+#: app/templates/experts.html:15
+msgid "Local Experts Near You"
+msgstr "तुमच्या जवळचे स्थानिक तज्ञ"
+
+#: app/templates/experts.html:27 app/templates/experts.html:64
+msgid "Expertise"
+msgstr "कौशल्य / विशेष प्राविण्य"
+
+#: app/templates/experts.html:46 app/templates/experts.html:83
+msgid "Show More"
+msgstr "अधिक पहा"
+
+#: app/templates/experts.html:52
+msgid "National / Global Experts"
+msgstr "राष्ट्रीय / जागतिक तज्ञ"
+
 #: app/templates/home.html:10
 msgid ""
 "Upload a leaf image and let our deep learning model instantly analyze\n"
 "    plant health and detect possible crop diseases with high accuracy."
 msgstr ""
-"पानाचे छायाचित्र अपलोड करा आणि आमच्या Deep Learning मॉडेलला त्वरित रोपाच्या आरोग्याचे "
-"विश्लेषण करू द्या आणि उच्च अचूकतेसह संभाव्य पीक रोगांचा शोध घेऊ द्या."
+"पानाचे छायाचित्र अपलोड करा आणि आमच्या Deep Learning मॉडेलला त्वरित "
+"रोपाच्या आरोग्याचे विश्लेषण करू द्या आणि उच्च अचूकतेसह संभाव्य पीक "
+"रोगांचा शोध घेऊ द्या."
 
 #: app/templates/home.html:15
 msgid ""
@@ -176,8 +221,7 @@ msgstr "झटपट तपासणी"
 msgid ""
 "Upload a leaf image and receive disease prediction within\n"
 "          seconds."
-msgstr ""
-"पानाचे छायाचित्र अपलोड करा आणि काही सेकंदात रोगाचा अंदाज मिळवा."
+msgstr "पानाचे छायाचित्र अपलोड करा आणि काही सेकंदात रोगाचा अंदाज मिळवा."
 
 #: app/templates/home.html:37
 msgid "AI Powered"
@@ -188,7 +232,8 @@ msgid ""
 "Built using Convolutional Neural Networks (CNNs) trained on\n"
 "          plant disease datasets."
 msgstr ""
-"वनस्पती रोग डेटासेटवर प्रशिक्षित Convolutional Neural Networks (CNNs) वापरून तयार केले आहे."
+"वनस्पती रोग डेटासेटवर प्रशिक्षित Convolutional Neural Networks (CNNs) "
+"वापरून तयार केले आहे."
 
 #: app/templates/home.html:47
 msgid "38 Crop Classes"
@@ -198,8 +243,7 @@ msgstr "३८ पीक श्रेणी"
 msgid ""
 "Detect diseases across multiple crops including tomato, apple,\n"
 "          grape and more."
-msgstr ""
-"टोमॅटो, सफरचंद, द्राक्षे इतर आणि अनेक पिकांमधील रोगांचा शोध घ्या."
+msgstr "टोमॅटो, सफरचंद, द्राक्षे इतर आणि अनेक पिकांमधील रोगांचा शोध घ्या."
 
 #: app/templates/login.html:8 app/templates/register.html:16
 msgid "E-mail"
@@ -229,3 +273,38 @@ msgstr "ठिकाण"
 msgid "Already registered"
 msgstr "आधीच नोंदणी केली आहे?"
 
+#: app/templates/weather.html:6
+msgid ""
+"Weather\n"
+"      Intelligence"
+msgstr "हवामान माहिती"
+
+#: app/templates/weather.html:10
+msgid ""
+"Real-time farming weather insights to support crop health and\n"
+"      planning"
+msgstr "पिकांचे आरोग्य आणि नियोजनासाठी रिअल-टाइम शेती हवामान माहिती"
+
+#: app/templates/weather.html:19
+msgid "Temperature"
+msgstr "तापमान"
+
+#: app/templates/weather.html:27
+msgid "Humidity"
+msgstr "आद्रता"
+
+#: app/templates/weather.html:35 app/templates/weather.html:69
+msgid "Rain Probability"
+msgstr "पावसाची शक्यता"
+
+#: app/templates/weather.html:43
+msgid "Wind Speed"
+msgstr "वाऱ्याचा वेग"
+
+#: app/templates/weather.html:50
+msgid "7-Day Forecast"
+msgstr "७ दिवसांचा अंदाज"
+
+#: app/templates/weather.html:59
+msgid "Today"
+msgstr "आज"
