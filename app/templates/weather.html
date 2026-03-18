@@ -1,0 +1,77 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container mt-4">
+  <div class="weather-hero">
+    <h2>
+      <i class="fa fa-cloud" aria-hidden="true"></i> {{_('Weather
+      Intelligence')}}
+    </h2>
+    <p>
+      {{_('Real-time farming weather insights to support crop health and
+      planning')}}
+    </p>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-md-3 mb-3">
+      <div class="weather-metric">
+        <div class="metric-icon"><i class="fa fa-thermometer-half"></i></div>
+        <div class="metric-title">{{_('Temperature')}}</div>
+        <div class="metric-value">{{ weather.temperature }}°C</div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <div class="weather-metric">
+        <div class="metric-icon"><i class="fa fa-tint"></i></div>
+        <div class="metric-title">{{_('Humidity')}}</div>
+        <div class="metric-value">{{ weather.humidity }}%</div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <div class="weather-metric">
+        <div class="metric-icon"><i class="fa fa-umbrella"></i></div>
+        <div class="metric-title">{{_('Rain Probability')}}</div>
+        <div class="metric-value">{{ weather.rain_probability }}%</div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <div class="weather-metric">
+        <div class="metric-icon"><i class="fa fa-leaf"></i></div>
+        <div class="metric-title">{{_('Wind Speed')}}</div>
+        <div class="metric-value">{{ weather.wind }} km/h</div>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="forecast-title">
+    <i class="fa fa-calendar" aria-hidden="true"></i> {{_('7-Day Forecast')}}
+  </h4>
+
+  <div class="row">
+    {% for day in weather.forecast %}
+    <div class="col-md-3 mb-3">
+      <div class="forecast-card">
+        <div class="forecast-date">
+          <strong>
+            {% if loop.index == 1 %} {{_('Today')}} {% else %} {{ day.date }} {%
+            endif %}
+          </strong>
+        </div>
+        <div class="forecast-temp">
+          <i class="fa fa-thermometer-three-quarters"></i> {{ day.temp_min }}°C
+          — {{ day.temp_max }}°C
+        </div>
+        <div class="forecast-rain">
+          <i class="fa fa-tint"></i>
+          <strong>{{_('Rain Probability')}}:</strong> {{ day.rain }}%
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

@@ -108,56 +108,80 @@ input[type="file"] {
   background: var(--green-card);
 }
 
-/* ---------- NAVBAR ---------- */
+/* ---------- CONSOLIDATED NAVBAR ---------- */
 
 .custom-navbar {
   background: linear-gradient(90deg, var(--green-dark), var(--green-primary));
   padding: 12px 0;
 }
 
+/* Brand & Logo */
 .navbar-brand {
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
 .brand-sub {
-  font-size: 0.7rem;
-  display: block;
+  font-size: 0.65rem;
   opacity: 0.8;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
+/* Navigation Links */
 .nav-custom {
-  margin-left: 20px;
-  transition: 0.3s;
-  font-weight: 500;
-}
-
-.nav-custom:hover {
-  color: var(--green-light) !important;
-  transform: translateY(-2px);
-}
-
-.nav-custom {
-  margin-left: 10px;
-  padding: 8px 14px;
+  margin-left: 7px;
+  padding: 6px 12px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
+.nav-custom i,
+.nav-custom fas,
+.nav-custom fa {
+  margin-right: 5px; /* Standard spacing for all icons */
+}
+
+/* Hover Effects */
 .nav-custom:hover {
   background: var(--green-highlight);
   color: white !important;
   transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Special Button Overrides */
 .logout-btn:hover {
-  background: #d9534f;
+  background: #d9534f !important; /* Crimson Red */
 }
 
 .register-btn:hover {
-  background: #5bc0de;
+  background: #5bc0de !important; /* Sky Blue */
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: var(--green-card);
+  color: var(--green-dark);
 }
 
 /* ---------- FOOTER ---------- */
@@ -484,6 +508,19 @@ input[type="file"] {
   animation: pulse 2s infinite;
 }
 
+/* stop animation when chat open */
+
+#chat-toggle.chat-open::after {
+  display: none;
+}
+
+#chat-toggle.chat-open {
+  background: #d34944;
+  margin-left: 80%;
+  transform: rotate(90deg);
+  transition: 0.25s;
+}
+
 #chat-window {
   display: none;
   width: 360px;
@@ -573,6 +610,100 @@ input[type="file"] {
 
 .expert-more-btn:hover {
   background: var(--green-dark);
+}
+
+/* ---------- WEATHER DASHBOARD ---------- */
+
+.weather-hero {
+  background: linear-gradient(120deg, var(--green-dark), var(--green-primary));
+  color: white;
+  padding: 40px 30px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.weather-hero h2 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.weather-hero p {
+  opacity: 0.9;
+}
+
+/* current weather cards */
+
+.weather-metric {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.weather-metric:hover {
+  transform: translateY(-6px);
+  background: var(--green-card);
+}
+
+.metric-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.metric-title {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+/* forecast section */
+
+.forecast-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--green-dark);
+}
+
+/* forecast cards */
+
+.forecast-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+  transition: 0.25s;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+  background: var(--green-card);
+}
+
+.forecast-date {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--green-dark);
+}
+
+.forecast-temp {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.forecast-rain {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* ---------- ANIMATIONS ---------- */
