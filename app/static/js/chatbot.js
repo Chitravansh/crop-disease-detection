@@ -71,15 +71,28 @@ sendBtn.onclick = async () => {
 
 const chatToggle = document.getElementById("chat-toggle");
 const chatWindow = document.getElementById("chat-window");
+const chatIcon = document.getElementById("chat-icon");
 
 if (!chatToggle || !chatWindow) {
   console.warn("Chat widget elements not found");
 } else {
   chatToggle.addEventListener("click", () => {
     if (chatWindow.style.display === "flex") {
+      // Close assistant
       chatWindow.style.display = "none";
+
+      chatIcon.classList.remove("fa-xmark");
+      chatIcon.classList.add("fa-robot");
+
+      chatToggle.classList.remove("chat-open");
     } else {
+      // Open assistant
       chatWindow.style.display = "flex";
+
+      chatIcon.classList.remove("fa-robot");
+      chatIcon.classList.add("fa-xmark");
+
+      chatToggle.classList.add("chat-open");
     }
   });
 }
