@@ -33,4 +33,13 @@
   <p id="confidence"></p>
 </div>
 
+<!-- Advisory Suggestion for auto chatbot response -->
+<div id="advisory-prompt" class="mt-3 text-center" style="display: none">
+  <p>🌿 {{ _('Do you want treatment suggestions?') }}</p>
+
+  <button class="btn btn-success" id="get-advisory">
+    {{ _('Yes, Show Treatment') }}
+  </button>
+</div>
+
 {% endblock %}

@@ -1,10 +1,11 @@
 import os
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, session 
 from werkzeug.utils import secure_filename
 
 from config import Config
 from app.services.prediction_service import model_predict
 from app.utils.auth_decorator import login_required
+
 
 
 prediction = Blueprint("prediction", __name__)
@@ -30,6 +31,12 @@ def predict():
         "crop": class_name[0],
         "disease": class_name[1].title().replace("_", " "),
         "confidence": round(confidence, 2),
+    }
+
+    # New Session storage for chatbot Integration
+    session["last_prediction"] = {
+    "crop": result["crop"],
+    "disease": result["disease"]
     }
 
     return jsonify(result)

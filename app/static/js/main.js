@@ -29,7 +29,6 @@ $(document).ready(function () {
   $("#imageUpload").change(function () {
     $(".image-section").show();
     $("#btn-predict").show();
-
     $("#result-card").hide();
 
     readURL(this);
@@ -63,6 +62,9 @@ $(document).ready(function () {
         $("#crop").text("Crop: " + data.crop);
         $("#disease").text("Disease: " + data.disease);
         $("#confidence").text("Confidence: " + data.confidence + "%");
+
+        // 🔥 NEW: Trigger chatbot smart prompt
+        triggerChatbotPrompt();
       },
 
       error: function (xhr, status, error) {
@@ -75,6 +77,76 @@ $(document).ready(function () {
       },
     });
   });
+
+  // ---------------- CHATBOT SMART PROMPT ----------------
+
+  function triggerChatbotPrompt() {
+    const chatBox = document.getElementById("chat-box");
+
+    // If chatbot not present (user not on chatbot page), skip safely
+    if (!chatBox) return;
+
+    // Open chatbot widget automatically
+    const chatWindow = document.getElementById("chat-window");
+    const chatIcon = document.getElementById("chat-icon");
+    const chatToggle = document.getElementById("chat-toggle");
+
+    if (chatWindow && chatWindow.style.display !== "flex") {
+      chatWindow.style.display = "flex";
+
+      if (chatIcon) {
+        chatIcon.classList.remove("fa-robot");
+        chatIcon.classList.add("fa-xmark");
+      }
+
+      if (chatToggle) {
+        chatToggle.classList.add("chat-open");
+      }
+    }
+
+    // Add smart bot message with inline button
+    addMessage(
+      `
+🌿 I detected a disease in your crop.
+
+Do you want treatment suggestions?
+
+<button onclick="getAdvisory()" class="btn btn-sm btn-success mt-2">
+Yes, Show Treatment
+</button>
+`,
+      "bot",
+    );
+  }
+
+  // ---------------- GLOBAL FUNCTION (IMPORTANT) ----------------
+  window.getAdvisory = async function () {
+    const chatBox = document.getElementById("chat-box");
+
+    if (!chatBox) return;
+
+    showTyping();
+
+    try {
+      const response = await fetch("/api/advisory", {
+        method: "POST",
+      });
+
+      const data = await response.json();
+
+      removeTyping();
+
+      if (data.reply) {
+        addMessage(data.reply, "bot");
+      } else {
+        addMessage("⚠️ Unable to fetch advisory.", "bot");
+      }
+    } catch (err) {
+      console.error("Advisory error:", err);
+      removeTyping();
+      addMessage("⚠️ Error fetching advisory. Try again.", "bot");
+    }
+  };
 
   // ---------------- DRAG & DROP ----------------
 
@@ -124,7 +196,6 @@ $(document).ready(function () {
 // ---------------- EXPERT PAGE FEATURES ----------------
 
 // show more local experts
-
 $("#show-more-local").click(function () {
   $(".extra-local").toggleClass("d-none");
 
@@ -136,7 +207,6 @@ $("#show-more-local").click(function () {
 });
 
 // show more global experts
-
 $("#show-more-global").click(function () {
   $(".extra-global").toggleClass("d-none");
 
@@ -148,7 +218,6 @@ $("#show-more-global").click(function () {
 });
 
 // expert search
-
 $("#expert-search").on("keyup", function () {
   let value = $(this).val().toLowerCase();
 

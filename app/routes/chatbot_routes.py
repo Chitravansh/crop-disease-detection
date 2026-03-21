@@ -24,3 +24,41 @@ def chat():
     session["chat_history"] = history[-10:]
 
     return jsonify({"reply": reply})
+
+# Prediction to chatbot integration
+@chatbot.route("/api/advisory", methods=["POST"])
+@login_required
+def advisory():
+    prediction = session.get("last_prediction")
+    language = session.get("language")
+
+    if not prediction:
+        return jsonify({"reply": "No prediction context found."})
+
+    crop = prediction.get("crop")
+    disease = prediction.get("disease")
+
+    if not crop or not disease:
+        return jsonify({"reply": "Incomplete prediction data."})
+
+    message = f"""
+Crop: {crop}
+Disease: {disease}
+
+Provide treatment, fertilizers, and prevention in {language} language.
+"""
+
+    history = session.get("chat_history", [])
+
+    try:
+        reply = ask_chatbot(message, history)
+
+        history.append({"role": "user", "content": message})
+        history.append({"role": "assistant", "content": reply})
+        session["chat_history"] = history[-10:]
+
+        return jsonify({"reply": reply})
+
+    except Exception as e:
+        print("Advisory Error:", str(e))
+        return jsonify({"reply": "Failed to fetch advisory."})
