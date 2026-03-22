@@ -7,6 +7,33 @@ $(document).ready(function () {
   let dropArea = document.getElementById("drop-area");
   let fileInput = document.getElementById("imageUpload");
 
+  // ---------------- DRAG & DROP ----------------
+
+  if (dropArea) {
+    ["dragenter", "dragover"].forEach((eventName) => {
+      dropArea.addEventListener(eventName, function (e) {
+        e.preventDefault();
+        dropArea.style.background = "#e6fff8";
+      });
+    });
+
+    ["dragleave", "drop"].forEach((eventName) => {
+      dropArea.addEventListener(eventName, function (e) {
+        e.preventDefault();
+        dropArea.style.background = "white";
+      });
+    });
+
+    dropArea.addEventListener("drop", function (e) {
+      let files = e.dataTransfer.files;
+
+      if (files.length > 0) {
+        fileInput.files = files;
+        $("#imageUpload").trigger("change");
+      }
+    });
+  }
+
   // ---------------- IMAGE PREVIEW ----------------
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -148,31 +175,49 @@ Yes, Show Treatment
     }
   };
 
-  // ---------------- DRAG & DROP ----------------
+  // ---------------- GEOLOCATION ----------------
 
-  if (dropArea) {
-    ["dragenter", "dragover"].forEach((eventName) => {
-      dropArea.addEventListener(eventName, function (e) {
-        e.preventDefault();
-        dropArea.style.background = "#e6fff8";
-      });
-    });
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      async function (position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
 
-    ["dragleave", "drop"].forEach((eventName) => {
-      dropArea.addEventListener(eventName, function (e) {
-        e.preventDefault();
-        dropArea.style.background = "white";
-      });
-    });
+        try {
+          // Reverse geocoding (free API)
+          const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`,
+          );
 
-    dropArea.addEventListener("drop", function (e) {
-      let files = e.dataTransfer.files;
+          const data = await res.json();
 
-      if (files.length > 0) {
-        fileInput.files = files;
-        $("#imageUpload").trigger("change");
-      }
-    });
+          const city =
+            data.address.city ||
+            data.address.town ||
+            data.address.village ||
+            "Your Area";
+
+          await fetch("/api/location", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              city,
+              latitude,
+              longitude,
+            }),
+          });
+
+          console.log("Location stored:", city);
+        } catch (err) {
+          console.error("Location fetch error:", err);
+        }
+      },
+      function (error) {
+        console.warn("Geolocation denied or failed.");
+      },
+    );
   }
 
   // ---------------- FLASH MESSAGE ----------------
