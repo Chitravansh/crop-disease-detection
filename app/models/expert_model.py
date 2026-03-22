@@ -20,7 +20,13 @@ class ExpertModel:
         query = {"type": "local"}
 
         if location and location != "unknown":
-            query["location"] = {"$regex": location, "$options": "i"}
+            city = location.get("city")
+
+            if city:
+                query["location"] = {
+                    "$regex": city,
+                    "$options": "i"
+                }
 
         return list(experts_collection.find(query))
 
