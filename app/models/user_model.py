@@ -18,3 +18,9 @@ def create_user(name, email, password, language="en", location="unknown"):
 
 def find_user_by_email(email):
     return users_collection.find_one({"email": email})
+
+def update_user_location(user_id, location):
+    users_collection.update_one(
+        {"_id": user_id},
+        {"$set": {"location": location}}
+    )

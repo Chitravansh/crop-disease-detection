@@ -9,6 +9,8 @@ from app.routes.language_routes import language
 from app.routes.chatbot_routes import chatbot
 from app.routes.expert_routes import experts_bp
 from app.routes.weather_routes import weather_bp
+from app.routes.location_routes import location_bp
+
 
 
 
@@ -49,6 +51,7 @@ def create_app():
     app.register_blueprint(chatbot)
     app.register_blueprint(experts_bp)
     app.register_blueprint(weather_bp)
+    app.register_blueprint(location_bp)
 
 
     return app

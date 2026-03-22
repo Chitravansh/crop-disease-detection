@@ -12,6 +12,21 @@
     </p>
   </div>
 
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">
+      <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+      {{ _('Your Location')}}: <strong>{{ city }}</strong>
+    </h4>
+
+    <button
+      class="btn btn-sm btn-outline-secondary"
+      onclick="refreshLocation()"
+    >
+      <i class="fa fa-refresh" aria-hidden="true"></i>
+      {{ _('Update') }}
+    </button>
+  </div>
+
   <div class="row mb-5">
     <div class="col-md-3 mb-3">
       <div class="weather-metric">
@@ -73,5 +88,10 @@
     {% endfor %}
   </div>
 </div>
+<script>
+  function refreshLocation() {
+    location.reload();
+  }
+</script>
 
 {% endblock %}
