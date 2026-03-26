@@ -230,10 +230,10 @@ Yes, Show Treatment
   $("#show-more-btn").click(function () {
     $(".more-disease").slideToggle();
 
-    if ($(this).text() === "Show More") {
-      $(this).text("Show Less");
-    } else {
+    if ($(this).text() === "Show Less") {
       $(this).text("Show More");
+    } else {
+      $(this).text("Show Less");
     }
   });
 });
@@ -244,10 +244,10 @@ Yes, Show Treatment
 $("#show-more-local").click(function () {
   $(".extra-local").toggleClass("d-none");
 
-  if ($(this).text() === "Show More") {
-    $(this).text("Show Less");
-  } else {
+  if ($(this).text() === "Show Less") {
     $(this).text("Show More");
+  } else {
+    $(this).text("Show Less");
   }
 });
 
@@ -255,10 +255,10 @@ $("#show-more-local").click(function () {
 $("#show-more-global").click(function () {
   $(".extra-global").toggleClass("d-none");
 
-  if ($(this).text() === "Show More") {
-    $(this).text("Show Less");
-  } else {
+  if ($(this).text() === "Show Less") {
     $(this).text("Show More");
+  } else {
+    $(this).text("Show Less");
   }
 });
 

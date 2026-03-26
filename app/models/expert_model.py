@@ -15,14 +15,20 @@ class ExpertModel:
         return list(experts_collection.find())
 
     @staticmethod
-    def get_local_experts(location=None):
+    def get_by_city(city):
+        return list(
+            experts_collection.find({
+                "city": {"$regex": f"^{city}$", "$options": "i"}
+            })
+        )
 
-        query = {"type": "local"}
-
-        if location and location != "unknown":
-            query["location"] = {"$regex": location, "$options": "i"}
-
-        return list(experts_collection.find(query))
+    @staticmethod
+    def get_by_state(state):
+        return list(
+            experts_collection.find({
+                "state": {"$regex": f"^{state}$", "$options": "i"}
+            })
+        )
 
     @staticmethod
     def get_global_experts():

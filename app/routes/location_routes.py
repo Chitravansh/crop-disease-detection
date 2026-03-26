@@ -17,6 +17,7 @@ def set_location():
 
         location = {
             "city": data.get("city"),
+            "state": data.get("state"),
             "latitude": data.get("latitude"),
             "longitude": data.get("longitude"),
         }

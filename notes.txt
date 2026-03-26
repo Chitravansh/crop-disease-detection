@@ -20,3 +20,7 @@ Reason:
         4. Good agricultural weather data
 
 ChatBot: Groq API
+
+Experts System:
+        Primary Source: KVK Directory (ICAR)
+        From Indian Council of Agricultural Research
