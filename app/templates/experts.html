@@ -3,86 +3,153 @@
 <div class="container mt-4">
   <h2 class="text-center mb-4">{{_('Agricultural Experts')}}</h2>
 
-  <div class="expert-search-box">
-    <input
-      id="expert-search"
-      class="form-control expert-search-input"
-      type="text"
-      placeholder="{{_('Search by doctor, organization, or expertise...')}}"
-    />
+  <div class="expert-search-box mb-5">
+    <div class="input-group">
+      <span class="input-group-text bg-white border-end-0"
+        ><i class="fa fa-search text-muted"></i
+      ></span>
+      <input
+        id="expert-search"
+        class="form-control border-start-0 ps-0"
+        type="text"
+        placeholder="{{_('Search by name, organization, or expertise...')}}"
+      />
+    </div>
   </div>
 
-  <h4 class="mb-3">{{_('Local Experts Near You')}}</h4>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4>{{_('Experts Near You')}}</h4>
+    <span class="badge bg-light text-dark border">
+      <i class="fa fa-map-marker text-success"></i> {{ city if city else
+      _('Unknown Location') }}
+    </span>
+  </div>
 
-  <div class="row expert-group" id="local-experts">
-    {% for expert in local_experts %}
+  <div class="row" id="local-experts-container">
+    {% if not local_experts %}
+    <div class="col-12">
+      <p class="text-muted text-center p-5 border rounded bg-light">
+        {{ _('No local experts found in your immediate area.') }}
+      </p>
+    </div>
+    {% endif %} {% for expert in local_experts %}
     <div
-      class="col-md-4 mb-3 expert-card-wrapper {% if loop.index > 3 %}d-none extra-local{% endif %}"
+      class="col-md-4 mb-4 expert-card-wrapper {% if loop.index > 3 %}d-none extra-local{% endif %}"
     >
-      <div class="expert-card">
-        <div class="expert-name">{{ expert.name }}</div>
-        <div class="expert-org">{{ expert.organization }}</div>
+      <div class="card h-100 expert-card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-success mb-1">{{ expert.name }}</h5>
+          <p class="text-muted small mb-3">{{ expert.organization }}</p>
 
-        <div class="expert-info">
-          <strong>{{_('Expertise')}}:</strong> {{ expert.expertise }}
-        </div>
-        <div class="expert-info">
-          <i class="fa fa-map-marker" aria-hidden="true"></i> {{ expert.location
-          }}
-        </div>
-        <div class="expert-info">
-          <i class="fa fa-phone" aria-hidden="true"></i> {{ expert.phone }}
-        </div>
-        <div class="expert-info">
-          <i class="fa fa-envelope" aria-hidden="true"></i> {{ expert.email }}
+          <div class="mb-2">
+            <span
+              class="badge bg-soft-success text-success"
+              style="background-color: #e8f5e9"
+            >
+              {{ expert.expertise }}
+            </span>
+          </div>
+
+          <div class="expert-info small mb-2">
+            <i class="fa fa-map-pin text-muted me-2"></i>
+            {{ expert.city }}, {{ expert.state }}
+          </div>
+
+          <div class="expert-info small mb-2">
+            <a
+              href="tel:{{ expert.phone }}"
+              class="text-decoration-none text-dark"
+            >
+              <i class="fa fa-phone text-muted me-2"></i> {{ expert.phone }}
+            </a>
+          </div>
+
+          <div class="expert-info small">
+            <a
+              href="mailto:{{ expert.email }}"
+              class="text-decoration-none text-dark"
+            >
+              <i class="fa fa-envelope text-muted me-2"></i> {{ expert.email if
+              expert.email else 'N/A' }}
+            </a>
+          </div>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
 
-  <div class="text-center">
-    <button id="show-more-local" class="expert-more-btn">
+  {% if local_experts|length > 3 %}
+  <div class="text-center mb-5">
+    <button id="show-more-local" class="btn btn-outline-success px-4">
       {{_('Show More')}}
     </button>
   </div>
+  {% endif %}
 
   <hr class="my-5" />
 
-  <h4 class="mb-3">{{_('National / Global Experts')}}</h4>
+  <h4 class="mb-4">{{_('National / Global Experts')}}</h4>
 
-  <div class="row expert-group" id="global-experts">
-    {% for expert in global_experts %}
+  <div class="row" id="global-experts-container">
+    {% if not global_experts %}
+    <div class="col-12 text-center p-5">
+      <p class="text-muted">
+        {{ _('No global experts available right now.') }}
+      </p>
+    </div>
+    {% endif %} {% for expert in global_experts %}
     <div
-      class="col-md-4 mb-3 expert-card-wrapper {% if loop.index > 3 %}d-none extra-global{% endif %}"
+      class="col-md-4 mb-4 expert-card-wrapper {% if loop.index > 3 %}d-none extra-global{% endif %}"
     >
-      <div class="expert-card">
-        <div class="expert-name">{{ expert.name }}</div>
-        <div class="expert-org">{{ expert.organization }}</div>
+      <div class="card h-100 expert-card shadow-sm border-primary-subtle">
+        <div class="card-body">
+          <h5 class="card-title text-primary mb-1">{{ expert.name }}</h5>
+          <p class="text-muted small mb-3">{{ expert.organization }}</p>
 
-        <div class="expert-info">
-          <strong>{{_('Expertise')}}:</strong> {{ expert.expertise }}
-        </div>
-        <div class="expert-info">
-          <i class="fa fa-map-marker" aria-hidden="true"></i> {{ expert.location
-          }}
-        </div>
-        <div class="expert-info">
-          <i class="fa fa-phone" aria-hidden="true"></i> {{ expert.phone }}
-        </div>
-        <div class="expert-info">
-          <i class="fa fa-envelope" aria-hidden="true"></i> {{ expert.email }}
+          <div class="mb-2">
+            <span
+              class="badge bg-primary-subtle text-primary border border-primary-subtle"
+              >{{ expert.expertise }}</span
+            >
+          </div>
+
+          <div class="expert-info small mb-2">
+            <i class="fa fa-globe text-muted me-2"></i> {{ expert.city }}, {{
+            expert.state }}
+          </div>
+
+          <div class="expert-info small mb-2">
+            <a
+              href="tel:{{ expert.phone }}"
+              class="text-decoration-none text-dark"
+            >
+              <i class="fa fa-phone text-muted me-2"></i> {{ expert.phone }}
+            </a>
+          </div>
+
+          <div class="expert-info small">
+            <a
+              href="mailto:{{ expert.email }}"
+              class="text-decoration-none text-dark"
+            >
+              <i class="fa fa-envelope text-muted me-2"></i> {{ expert.email if
+              expert.email else 'N/A' }}
+            </a>
+          </div>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
 
-  <div class="text-center">
-    <button id="show-more-global" class="expert-more-btn">
+  {% if global_experts|length > 3 %}
+  <div class="text-center mt-3">
+    <button id="show-more-global" class="btn btn-outline-primary px-4">
       {{_('Show More')}}
     </button>
   </div>
+  {% endif %}
 </div>
 
 {% endblock %}

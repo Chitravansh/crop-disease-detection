@@ -623,6 +623,16 @@ input[type="file"] {
   text-align: center;
 }
 
+.bg-soft-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+#expert-search:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+
 .weather-hero h2 {
   font-weight: 700;
   margin-bottom: 8px;

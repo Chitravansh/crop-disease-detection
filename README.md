@@ -29,9 +29,11 @@ ArogyaFasal is a **full-stack AI-driven agricultural platform** that helps farme
 - Features:
   - Multilingual responses
   - Markdown formatting
+  - Context-aware responses
   - Typing animation
   - Conversation history
   - Floating widget UI
+  - Integrated CNN → Chatbot context sharing
 
 ---
 
@@ -58,7 +60,7 @@ ArogyaFasal is a **full-stack AI-driven agricultural platform** that helps farme
 
 ## 🌦 Weather Intelligence Module
 
-- Real-time weather insights for farmers
+- Real-time weather insights for farmers based on Geo-location
 
 Includes:
 
@@ -78,6 +80,15 @@ Includes:
   - Hindi
   - Marathi
   - Punjabi
+
+---
+
+## Geo-Location Based Personalization
+
+- Integrated browser-based geolocation
+  -Used across:
+  - Weather module
+  - Expert recommendations
 
 ---
 
@@ -144,6 +155,9 @@ app/
 ├── database/
 │   └── mongo.py
 │
+├── scripts/
+│   └── seed_experts.py
+│
 ├── utils/
 │   ├── auth_decorator.py
 │   ├── password_utils.py
@@ -156,8 +170,8 @@ app/
 ├── data/
 │   └── disease_labels.py
 │
-├── translations/
-│
+translations/
+
 config.py
 app.py
 requirements.txt
@@ -228,7 +242,13 @@ mkdir uploads
 
 ---
 
-## 6️⃣ Run the Application
+## 6️⃣ Seed experts
+
+```bash
+python -m app.scripts.seed_experts
+```
+
+## 7️⃣ Run the Application
 
 ```bash
 flask run
@@ -293,8 +313,6 @@ keras==2.4.3
 
 # 🔮 Future Enhancements
 
-- 🔗 CNN → Chatbot integration (auto treatment)
-- 📍 Auto location-based weather
 - 📞 Expert booking system
 - 📊 Farmer dashboard
 - 📱 Mobile app version

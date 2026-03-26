@@ -8,13 +8,12 @@ experts_bp = Blueprint("experts", __name__)
 @login_required
 def experts_page():
 
-    user_location = session.get("location")
-
-    local_experts = ExpertService.fetch_local_experts(user_location)
-    global_experts = ExpertService.fetch_global_experts()
+    location = session.get("location")
+    experts = ExpertService.get_experts(location)
 
     return render_template(
         "experts.html",
-        local_experts=local_experts,
-        global_experts=global_experts
+        local_experts=experts["local"],
+        global_experts=experts["global"],
+        city=location.get("city") if location else "Unknown"
     )
